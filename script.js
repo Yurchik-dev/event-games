@@ -47,6 +47,9 @@ mainButtons.forEach(item => {
             case 'song_section': 
                 chooseSection(sectArr, target)
                 break;
+            case 'dance_section2': 
+                chooseSection(sectArr, target)
+                break;
             default:
                 break;          
         }
@@ -405,8 +408,6 @@ function finishGuess() {
   }
 
   confirmDoneButton.addEventListener('pointerdown', () => {
-    // console.log('click');
-    
     finishGuess()
 })
 
@@ -467,10 +468,82 @@ function whiteDance() {
     btns.forEach(item => item.style.color = '#fff')
 }
 
+const chooseButtonsDance2 = [...document.querySelectorAll('.dance2_choose_button')];
+console.log(chooseButtonsDance2);
+// const check = [...document.querySelectorAll('.checkbox-dance')]
+
+// const audio = [...document.querySelectorAll('.myAudio')];
+// const playPauseBtn = [...document.querySelectorAll('.playPauseBtn')];
+
+// console.log(audio);
+// console.log(playPauseBtn);
 
 
+// playPauseBtn.forEach(item => {
+//     console.log(item);
+    
+//     item.addEventListener('click', (e) => {
+//         const parent = e.target.closest('div')
+//         const audio = parent.querySelector('audio')
+        
+//   if (audio.paused) {
+//     audio.play();
+//     item.textContent = '⏸ Pause';
+//   } else {
+//     audio.pause();
+//     item.textContent = '▶️ Play';
+//   }
+// });
+// })
+// check.forEach(check => {
+//     check.addEventListener('change', (e) => {
+//         if(check.checked) {
+//             const parent = check.closest('button');
+//             parent.style.background = 'grey'
+//             let audio = parent.querySelector('audio')
+//             let iframe = parent.querySelector('iframe')
+//             if(audio) {audio.hidden = true}
+//             if(iframe) {}
+//         } else {
+//             check.closest('button').style.background = 
+//             'linear-gradient(to bottom, #79bbff 5%, #378de5 100%)';
+            
+//         }
+
+//     })
+// })
 
 
+chooseButtonsDance2.forEach(item => {
+    item.addEventListener('pointerdown', (e) => {
+        console.log(e.target);
+        
+        const parent = e.target.closest('div');
+        const closeVideoBtn = document.querySelector('.closeVideo2')
+    // console.log(closeVideoBtn);
+    
+  if (!parent) return; // игнорировать клики вне кнопок
+
+  if (parent.querySelector('audio')) {
+    parent.querySelector('audio').removeAttribute('hidden')
+    greyDiv(parent)
+  } else if (parent.querySelector('iframe')) {
+    // console.log('Это кнопка с <iframe>');
+    parent.querySelector('iframe').style.display = 'block'
+        closeVideoBtn.style.display = 'block'
+        greyDiv(parent)
+        closeVideoBtn.addEventListener('click', () => {
+            parent.querySelector('iframe').style.display = 'none'
+            closeVideoBtn.style.display = 'none'
+        })
+        
+        }
+    })
+    })
+
+function greyDiv(el) {
+    el.style.background = 'grey'
+}
 
 
 

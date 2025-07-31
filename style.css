@@ -54,9 +54,16 @@ section {
     object-fit: contain;
 }
 
+.btns_main_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
 .btn_main {
     cursor: pointer;
-    width: 100px;
+    min-width: 130px;
     height: 30px;
     border: none;
     background-color: #0084ff;
@@ -425,6 +432,16 @@ label {
     padding: 5px;
 }
 
+.closeVideo2 {
+    display: none;
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+}
+
 /* Song block */
 
 .song_title {
@@ -616,4 +633,60 @@ label {
     bottom: 40px;
     left: 50%;
     transform: translate(-50%);
+}
+
+.dance2_choose_button {
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size: 50px;
+	font-weight:bold;
+	padding:6px 24px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: space-between;
+    /* position: relative; */
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+    transition: background-color 0.5s ease;
+}
+.dance2_choose_button:hover {
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#378de5;
+}
+/* .dance2_choose_button:active {
+	position:relative;
+	top:1px;
+} */
+
+.myAudio1 {
+    width: 200px;
+}
+
+.dance_section2_wrapper {
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+    gap: 24px; 
+    text-align: center;
+    min-height: calc(100vh - 100px);
+    /* background-color: #0084ff; */
+    margin: 20px 0;
+}
+
+
+.videoDance2 {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    z-index: 10;
 }
