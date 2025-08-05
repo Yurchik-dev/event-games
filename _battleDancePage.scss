@@ -1,0 +1,218 @@
+
+.danceWrapper {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    /* width: 100%;
+    height: 100%; */
+    justify-content: space-around;
+    align-items: end;
+}
+
+.dance_modal_window {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, #F97E9F, #0084ff);
+    border-radius: 12px;
+}
+
+.closeDanceModal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.input_wrapper {
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #003dcd;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.danceInput {
+    width: 100%;
+    height: 30px;
+    border-radius: 12px;
+    border: none;
+    color: #0084ff;
+    font-size: 18px;
+    font-weight: 500;
+    outline-color: #0084ff;
+}
+
+.danceInput::placeholder {
+    padding-left: 10px;
+}
+
+
+.danceModalBtn {
+    cursor: pointer;
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    border: none;
+    height: 30px;
+    color: #003dcd;
+    font-weight: 600;
+    transition: all ease .3s;
+    outline-color: #0084ff;
+}
+
+.danceModalBtn:hover {
+    transform: scale(1.2);
+}
+
+.danceChooseField {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.choosenDance {
+    cursor: pointer;
+    border: 2px solid teal;
+    border-radius: 12px;
+    padding: 6px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all, ease, .7s;
+    /* animation: shake 10s ease; */
+}
+
+.dance_logo {
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.choosenDance:hover {
+    /* background-color: white; */
+    color: #003dcd;  
+    /* font-size: 18px; */
+}
+
+
+
+.danceReload {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: #0084ff;
+    outline-color: #0084ff;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 600;
+    transition: all ease .3s;
+}
+
+.danceReload:hover {
+    background-color: #fff;
+    color: #0084ff;
+}
+
+.danceTable {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    padding: 5px;
+    gap: 5px;
+    border: 2px solid grey;
+    border-radius: 6px;
+}
+
+.cell {
+    cursor: pointer;
+    min-height: 36px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    background-color: #0084ff;
+    transition: all ease .3s;
+    border-radius: 6px;
+    color: white;
+}
+
+.cell:hover {
+    transform: scale(1.1);
+    background-color: #F97E9F;
+}
+
+.danceTeam {
+    width: 40%;
+}
+
+.name_team {
+    margin: 10px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #0084ff;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/* .name_team2 {
+    color: #F97E9F;
+} */
+
+.videoDance {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+}
+
+.closeVideo {
+    display: none;
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+}
+
+.closeVideo2 {
+    display: none;
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+}

@@ -1,0 +1,53 @@
+
+.quiz_modal {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.quiz_modal_wrapper {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, #0109A9, #010451);
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.question {
+    margin-top: 30px;
+    font-size: 50px;
+    text-align: center;
+    color: #F4EE96;
+}
+
+.answer {
+    cursor: pointer;
+    width: 400px;
+    height: 60px;
+    border: none;
+    border-radius: 12px;
+    margin: 10px auto;
+    font-size: 25px;
+    background-color: #F4EE96;
+    color: #010451;
+}
+
+.audio {
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+}

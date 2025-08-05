@@ -1,0 +1,16 @@
+
+.main_section {
+    display: block;
+}
+
+.main_img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.main_wrapper {
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
