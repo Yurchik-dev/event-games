@@ -2,7 +2,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #0A0A0A;
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 p {
@@ -19,42 +21,50 @@ section {
   padding: 0 20px;
 }
 
-.logo {
-  height: 50px;
-  color: #fff;
+.inter {
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
 }
 
-.logo_img {
+.noto {
+  font-size: 2rem;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.header {
+  position: sticky;
+  min-height: 60px;
+  background-color: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  padding: 0 40px;
+}
+.header_logo {
+  height: 50px;
+  padding: 0 10px;
+  color: #fff;
+}
+.header_logo_img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 6px;
 }
-
-.advertise {
-  color: #fff;
-  border: 1px solid white;
-  border-radius: 6px;
-  padding: 10px;
-}
-
-.header_wrapper {
-  /* width: 100%; */
-  position: sticky;
-  height: 60px;
-  /* background-color: #14748b; */
-  background-color: #0d187b;
+.header_buttons {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-}
-
-.btns_main_wrapper {
-  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+.header_contacts {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0 10px;
 }
 
 .btn_main {
@@ -78,17 +88,16 @@ section {
 .main_section {
   display: block;
 }
-
-.main_img {
-  height: 100%;
-  object-fit: contain;
-}
-
-.main_wrapper {
+.main_section-wrapper {
   height: calc(100vh - 60px);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.main_img {
+  height: 100%;
+  object-fit: contain;
 }
 
 .quiz_section {
@@ -208,8 +217,6 @@ section {
   position: relative;
   display: flex;
   gap: 20px;
-  /* width: 100%;
-  height: 100%; */
   justify-content: space-around;
   align-items: end;
 }

@@ -1,9 +1,12 @@
+@use 'variables';
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #0A0A0A;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: variables.$mainBg; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 p {
@@ -18,5 +21,15 @@ section {
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.inter {
+    font-size: 2rem;
+    font-family: variables.$mainFont;
+}
+
+.noto {
+    font-size: 2rem;
+    font-family: variables.$accentFont;
 }
 
