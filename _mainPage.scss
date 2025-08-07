@@ -3,10 +3,20 @@
     display: block;
 
     &-wrapper {
-        height: calc(100vh - 60px);
+        min-height: inherit;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    &-heading {
+        font-size: 6rem;
+        text-align: center;
+        -webkit-text-fill-color: transparent;
+        background: linear-gradient(90deg, #ffa661, #f64b4d, #eb7ba3);
+        background: linear-gradient(to right, #fc4a1a, #ef4e7b, #a166ab, #f7b733);
+        // background: -webkit-linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+        background-clip: text;
     }
 }
 

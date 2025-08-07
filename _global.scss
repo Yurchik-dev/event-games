@@ -1,12 +1,24 @@
 @use 'variables';
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background: #0f0c29;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-    background: variables.$mainBg; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: variables.$mainBg, url(../event-games/src/images/abstract-bg3.avif); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    // background: url(./src/images/abstract-bg3.avif);
+    // background-position: center center;
+    font-family: variables.$mainFont;
+    color: variables.$textColor;
+    font-size: 1rem;
+
 }
 
 p {
@@ -15,21 +27,14 @@ p {
 
 section {
     display: none;
+    // min-height: calc(100vh - 3.875rem);
+    padding: 1.5rem 0;
 }
 
 .container {
-    max-width: 1600px;
+    max-width: 100rem;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1.25rem;
 }
 
-.inter {
-    font-size: 2rem;
-    font-family: variables.$mainFont;
-}
-
-.noto {
-    font-size: 2rem;
-    font-family: variables.$accentFont;
-}
 
